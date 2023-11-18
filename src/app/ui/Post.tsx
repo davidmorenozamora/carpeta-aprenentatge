@@ -1,22 +1,32 @@
+'use client'
+
 import { Post } from "../lib/definitions"
+import { Card, Image, Text, Button, Group } from '@mantine/core';
+import Link from "next/link"
 
 export default function Post({post}: {post: Post} ) {
 
     return (
-        <div className="max-w-sm rounded overflow-hidden shadow-lg">
-            <img className="w-full" src={post.image} alt={post.title}/>
-            <div className="px-6 py-4">
-                <div className="font-bold text-xl mb-2">{post.title}</div>
-                <p className="text-gray-700 text-base">
+        <Card shadow="sm" padding="lg" radius="md" withBorder>
+            <Card.Section>
+            <Image
+                src={post.image}
+                height={160}
+                alt={post.title}
+            />
+            </Card.Section>
+    
+            <Group justify="space-between" mt="md" mb="xs">
+            <Text fw={500}>{post.title}</Text>
+            </Group>
+    
+            <Text size="sm" c="dimmed">
                 {post.content}
-                </p>
-            </div>
-            <div className="px-6 pt-4 pb-2">
-                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
-            </div>
-        </div>
-
+            </Text>
+    
+            <Button component={Link} href={`/posts/${post.id}`} variant="light" color="blue" fullWidth mt="md" radius="md">
+                See more
+            </Button>
+      </Card>
     )
 }

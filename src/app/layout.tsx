@@ -2,9 +2,13 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import { fetchPrimaryCategories } from './lib/services/categories'
-import CategoryButton from './ui/CategoryButton'
+import '@mantine/core/styles.css';
+import { MantineProvider, Container, AppShell, AppShellHeader, AppShellMain, Space } from '@mantine/core';
+import CategoriesGrid from './ui/CategoriesGrid'
+import Header from './ui/Header';
 
 const inter = Inter({ subsets: ['latin'] })
+
 
 export const metadata: Metadata = {
   title: 'Carpeta Aprenentatge',
@@ -21,18 +25,27 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-      <main className="flex min-h-screen flex-col items-center justify-between p-24">
-          <div>
-            <div className='mb-5 flex gap-5 justify-center'>
-              {primaryCategories.map(category => 
-                <CategoryButton key={category.id} category={category}/>
-              )}
-            </div>
-            <div>
-              {children}
-            </div>
-          </div>
-        </main>
+        <MantineProvider>
+          <AppShell>
+            <AppShellHeader withBorder>
+              <Header/>
+            </AppShellHeader>
+            <AppShellMain>
+              <Container>
+                <Space h="lg"/>
+                <Space h="lg"/>
+                <Space h="lg"/>
+                <Space h="lg"/>
+                <CategoriesGrid categories={primaryCategories} buttonSize='lg'/>
+                <Space h="md"/>
+                <div>
+                  {children}
+                </div>
+                <Space h="lg"/>
+              </Container>
+            </AppShellMain>
+          </AppShell>
+        </MantineProvider>
       </body>
     </html>
   )

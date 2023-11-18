@@ -1,14 +1,19 @@
+'use client'
+
 import Link from "next/link"
 import { Category } from "../lib/definitions"
+import { Button } from '@mantine/core';
 
-export default function CategoryButton({category}: {category: Category}) {
-    
+export default function CategoryButton({category, buttonSize, variant}: {category: Category, variant: 'filled' | 'light', buttonSize?: 'lg' | 'md' | 'sm'}) {
+
     return (
-        <Link
-            className='p-3 border border-gray-300 border-solid rounded-md bg-gray-500 hover:bg-gray-800 transition-colors'  
-            href={`/${category.id}`} 
-            >
-             {category.title}
-        </Link>
+        <Button 
+            href={`/categories/${category.id}`}
+            variant={variant}
+            component={Link}
+            size={buttonSize}
+        >
+            {category.title}
+        </Button>
     )
 }

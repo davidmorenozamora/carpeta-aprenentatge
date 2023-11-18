@@ -1,6 +1,7 @@
 import { fetchPosts } from "./lib/services/posts"
 import {Suspense} from 'react';
-import Post from "./ui/Post";
+import MainLoader from "./ui/MainLoader";
+import PostsGrid from "./ui/PostsGrid";
 
 export default async function Home() {
 
@@ -8,12 +9,8 @@ export default async function Home() {
 
   return(
     <>
-      <Suspense fallback={<div>Cargando...</div>}>
-        <div className="flex gap-5">
-          {posts.map(post => (
-            <Post key={post.id} post={post}/>
-          ))} 
-        </div>
+      <Suspense fallback={<MainLoader/>}>
+        <PostsGrid posts={posts}/>
       </Suspense>
     </>
         
