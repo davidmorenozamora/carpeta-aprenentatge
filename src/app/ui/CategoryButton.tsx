@@ -10,6 +10,7 @@ export default function CategoryButton({category, buttonSize, variant}: {categor
         <Button 
             href={`/categories/${category.id}`}
             variant={variant}
+            color="#be9c94"
             component={Link}
             size={buttonSize}
         >

@@ -9,7 +9,7 @@ export default function CategoryImage({category}: {category: Category}) {
         <Link href={`/categories/${category.id}`}>
             <div className={`${css.imageContainer}`}>
                 <div>
-                    <Image src={category.image} className={`${css.image}`} alt={category.title}/>
+                    <Image src={`/assets/categories/${category.image}`} className={`${css.image}`} alt={category.title}/>
                 </div>
                 <Title order={4}>{category.title}</Title>
             </div>
