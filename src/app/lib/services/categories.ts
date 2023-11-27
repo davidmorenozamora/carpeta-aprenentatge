@@ -5,6 +5,8 @@ export async function fetchCategories() {
     try {
         const data = await sql<Category>`SELECT * FROM categories;`
         
+        console.info(`categories returned: ${JSON.stringify(data.rows)}`)
+
         return data.rows;
     } catch(error) {
         console.error('Database Error:', error);
@@ -16,7 +18,9 @@ export async function fetchCategories() {
 export async function fetchPrimaryCategories() {
     try {
         const data = await sql<Category>`SELECT * FROM categories where parent_category_id IS NULL;`
-        
+
+        console.info(`categories returned: ${JSON.stringify(data.rows)}`)
+
         return data.rows;
     } catch(error) {
         console.error('Database Error:', error);
@@ -30,6 +34,9 @@ export async function fetchCategoryByParentId(parent_category_id: string) {
     try {
         const data = await sql<Category>`SELECT * FROM categories where parent_category_id = ${parent_category_id};`
         
+        
+        console.info(`categories returned: ${JSON.stringify(data.rows)}`)
+
         return data.rows;
     } catch(error) {
         console.error('Database Error:', error);
