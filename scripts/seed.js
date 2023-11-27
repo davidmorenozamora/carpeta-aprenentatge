@@ -57,7 +57,7 @@ async function seedCategories(client) {
         CREATE TABLE IF NOT EXISTS categories (
           id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
           title VARCHAR(255) NOT NULL,
-          image TEXT,
+          image VARCHAR(255),
           parent_category_id UUID
         );
       `;
