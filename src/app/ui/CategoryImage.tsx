@@ -1,3 +1,5 @@
+'use client'
+
 import {Image, Title} from '@mantine/core';
 import { Category } from '../lib/definitions';
 import css from './categoryImage.module.css';
