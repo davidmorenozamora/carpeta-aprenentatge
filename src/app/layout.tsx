@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import './cssReset.css'
 import './globals.css'
 import { fetchPrimaryCategories } from './lib/services/categories'
 import '@mantine/core/styles.css';
@@ -25,7 +26,7 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <MantineProvider defaultColorScheme='light'>
+        <MantineProvider forceColorScheme='light' defaultColorScheme='light'>
           <AppShell>
             <AppShellHeader withBorder>
               <Header/>

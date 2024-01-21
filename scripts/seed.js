@@ -17,7 +17,9 @@ async function seedPosts(client) {
         id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
         title VARCHAR(255) NOT NULL,
         content TEXT,
-        image TEXT
+        image TEXT,
+        link VARCHAR(255),
+        indicadores VARCHAR(255)
       );
     `;
 
@@ -27,8 +29,8 @@ async function seedPosts(client) {
     const insertedPosts = await Promise.all(
       posts.map(async (post) => {
         return client.sql`
-        INSERT INTO posts (id, title, content, image)
-        VALUES (${post.id}, ${post.title}, ${post.content}, ${post.image})
+        INSERT INTO posts (id, title, content, image, link, indicadores)
+        VALUES (${post.id}, ${post.title}, ${post.content}, ${post.image}, ${post.link}, ${post.indicadores})
         ON CONFLICT (id) DO NOTHING;
       `;
       }),

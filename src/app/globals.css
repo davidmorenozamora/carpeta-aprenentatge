@@ -1,10 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
+
 body {
   color: black;
   background: #fff;
+  background-image: url("../../public/static/site-background.webp");
+  background-repeat: repeat-y;
+  background-size: cover;
 }
 
 #header {

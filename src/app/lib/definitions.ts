@@ -1,8 +1,10 @@
 export type Post = {
-    id: string;
-    title: string;
-    content: string;
-    image: string;
+    id: string,
+    title: string,
+    content: string,
+    image: string,
+    link: string,
+    indicadores: string
 };
   
 export type Category = {
@@ -11,4 +13,8 @@ export type Category = {
     image: string,
     parent_category_id: string | null,
 };
-  
+
+export type Indicador = {
+    id: string,
+    color: string
+}

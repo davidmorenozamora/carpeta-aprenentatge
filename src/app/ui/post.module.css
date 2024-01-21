@@ -8,3 +8,25 @@
 .postImage {
     height: 300px;
 }
+
+.imagenPortada {
+    height: 296.66px;
+    width: 100%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+}
+
+.card {
+    height: 100%;
+}
+
+.modalContent a {
+    color: #be9c94;
+}
+
+.emptyGrid {
+    text-align: center;
+    font-weight: 600;
+    font-size: 25px;
+    margin-top: 100px;
+}

@@ -8,7 +8,7 @@ import Link from 'next/link';
 export default function CategoryImage({category}: {category: Category}) {
 
     return (
-        <Link href={`/categories/${category.id}`}>
+        <Link href={`/categories/${category.parent_category_id}/${category.id}`}>
             <div className={`${css.imageContainer}`}>
                 <div>
                     <Image src={`/static/categories/${category.image}`} className={`${css.image}`} alt={category.title}/>
