@@ -28,7 +28,7 @@ const INTERNAL_POSTS = {
         <p>&nbsp;</p>`,
         image: 'foda.png',
         link: '',
-        indicadores: 'A1:A2:A3'
+        indicadores: ''
     },
     reflexioMarcCompetencies: {
         id: uuid.v4(),
@@ -56,7 +56,8 @@ const INTERNAL_POSTS = {
         <p>&nbsp;</p>
         `, 
         image: 'reflexio_marc_competencies.png',
-        link: ''
+        link: '',
+        indicadores: ''
     },
     prioritzacioPlaTreball: {
         id: uuid.v4(),
@@ -138,7 +139,7 @@ const INTERNAL_POSTS = {
         `, 
         image: 'prioritzacio_pla_treball.png',
         link: '',
-        indicadores: 'A1:A2:A3'
+        indicadores: ''
     },
     autoDiagnosticInicial: {
         id: uuid.v4(),
@@ -171,7 +172,7 @@ const INTERNAL_POSTS = {
         `, 
         image: 'autodiagnostic_inicial.png',
         link: '',
-        indicadores: 'A1:A2:A3'
+        indicadores: ''
     },
     graellaProgramacio: {
         id: uuid.v4(),
@@ -192,7 +193,7 @@ const INTERNAL_POSTS = {
         `, 
         image: 'graella_de_programacio.png',
         link: '',
-        indicadores: 'A1:A2:A3'
+        indicadores: 'A1:A2:A3:A4:A5:B3'
     },
     xarxaAprenentatge: {
         id: uuid.v4(),
@@ -213,7 +214,7 @@ const INTERNAL_POSTS = {
         `, 
         image: 'xarxa_aprenentatge.png',
         link: '',
-        indicadores: 'A1:A2:A3'
+        indicadores: 'D3'
     },
     documentacioProjecte: {
         id: uuid.v4(),
@@ -238,7 +239,7 @@ const INTERNAL_POSTS = {
         `,
         image: '',
         link: '',
-        indicadores: 'A1:A2:A3'
+        indicadores: ''
     },
     compromisos: {
         id: uuid.v4(),
@@ -297,7 +298,7 @@ const INTERNAL_POSTS = {
         `, 
         image: 'compromisos.png',
         link: '',
-        indicadores: 'A1:A2:A3'
+        indicadores: 'C4:D1:D3'
     },
     quadernRegistreObservacioAlumnat: {
         id: uuid.v4(),
@@ -327,7 +328,7 @@ const INTERNAL_POSTS = {
         `, 
         image: 'quadern_registre_observacio_alumnat.png',
         link: '',
-        indicadores: 'A1:A2:A3'
+        indicadores: 'D3'
     },
     llibretaDeProjectes: {
         id: uuid.v4(),
@@ -364,7 +365,7 @@ const INTERNAL_POSTS = {
         `, 
         image: 'llibreta_de_projectes.png',
         link: '',
-        indicadores: 'A1:A2:A3'
+        indicadores: 'A2:D3'
     },
     lessonPlan: {
         id: uuid.v4(),
@@ -393,7 +394,7 @@ const INTERNAL_POSTS = {
         `, 
         image: 'lesson_plan.png',
         link: '',
-        indicadores: 'A1:A2:A3'
+        indicadores: 'A1:B2:D1'
     },
     lecturaCompteHalloween: {
         id: uuid.v4(),
@@ -426,7 +427,7 @@ const INTERNAL_POSTS = {
         `, 
         image: 'lectura_compte_halloween.jpg',
         link: '',
-        indicadores: 'A1:A2:A3'
+        indicadores: 'A1'
     },
     plaDeMentoria: {
         id: uuid.v4(),
@@ -437,7 +438,7 @@ const INTERNAL_POSTS = {
         `, 
         image: '',
         link: '',
-        indicadores: 'A1:A2:A3'
+        indicadores: ''
     },
     sesioDeHalloween: {
         id: uuid.v4(),
@@ -474,7 +475,7 @@ const INTERNAL_POSTS = {
         `, 
         image: 'sesio_de_halloween.png',
         link: '',
-        indicadores: 'A1:A2:A3'
+        indicadores: 'A1:B3:B4'
     },
     formacioDigitalSomDocents: {
         id: uuid.v4(),
@@ -484,7 +485,7 @@ const INTERNAL_POSTS = {
         <p style="line-height:1.38">&nbsp;</p>`, 
         image: 'formacio_digital_som_docents.png',
         link: '',
-        indicadores: 'A1:A2:A3'
+        indicadores: 'B4'
     },
     treballEnEquip2: {
         id: uuid.v4(),
@@ -498,7 +499,7 @@ const INTERNAL_POSTS = {
         `, 
         image: 'treball_en_equip_2.png',
         link: '',
-        indicadores: 'A1:A2:A3'
+        indicadores: 'C3'
     },
     implicacioFamiliesAEscola: {
         id: uuid.v4(),
@@ -509,7 +510,7 @@ const INTERNAL_POSTS = {
         `, 
         image: 'implicacio_families_a_escola.png',
         link: '',
-        indicadores: 'A1:A2:A3'
+        indicadores: ''
     },
 }
 
