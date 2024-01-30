@@ -8,7 +8,7 @@ export const POSTS_CONFIG: Array<Indicador> = [
     {"id": "B2", "color": "green"},
     {"id": "B3", "color": "green"},
     {"id": "B4", "color": "green"},
-    {"id": "C3", "color": "yellow"},
+    {"id": "C2", "color": "yellow"},
     {"id": "C4", "color": "yellow"},
     {"id": "D1", "color": "gray"},
     {"id": "D3", "color": "gray"},

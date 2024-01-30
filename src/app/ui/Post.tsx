@@ -15,12 +15,14 @@ export default function Post({post}: {post: Post} ) {
 
     return (
         <>
-            <Modal opened={opened} size="lg" onClose={close} title={post.title}>
-                <div>
-                    <Image className={CSS.postImage} src={imageSrc} alt={post.title}/>    
-                </div>                
-                <hr className={CSS.postSeparator}/>
-                <Container className={CSS.modalContent}>{parsedContent}</Container>
+            <Modal opened={opened} size="90%" onClose={close}>
+                <Container className={CSS.modalContent}>          
+                    <h1>{post.title}</h1>
+                    <div>
+                        {post.image ? <Image className={CSS.postImage} src={imageSrc} alt={post.title}/> : <></>}
+                    </div>
+                    {parsedContent}    
+                </Container>
                 <Space h="sm" />
             </Modal>
         
